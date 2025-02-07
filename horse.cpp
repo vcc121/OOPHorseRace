@@ -12,4 +12,31 @@ Horse::Horse(){
 }
 
 void Horse::init(int index, int trackLength){
+	Horse::position = 0;
+	Horse::index = index;
+	Horse::trackLength = trackLength;
+}
 
+void Horse::advance(){
+	int turn = dist(rd);
+    Horse::position += turn;
+}
+
+void Horse::printLane(){
+	for (int position = 0; position < Horse::trackLength; position++) {
+        if (Horse::position == position) {
+            std::cout << Horse::index;
+        } else {
+            std::cout << ".";
+        }
+    }
+    std::cout << std::endl;
+}
+
+bool Horse::isWinner(){
+	if (Horse::position >= TRACK_LENGTH) {
+        std::cout << "Horse " << Horse::index << " WINS!!! " << std::endl;
+        return true;
+	}
+	bool result=false;
+}
