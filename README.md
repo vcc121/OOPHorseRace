@@ -1,6 +1,6 @@
 # OOPHorseRace
-include <iostream>
-include <random>
+include iostream
+include random
 
 Horse class:
   -int position
