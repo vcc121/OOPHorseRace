@@ -8,7 +8,7 @@ class Horse {
 		int index;
 	public:
 		Horse();
-		init(int index, int trackLength);
+		void init(int index, int trackLength);
 		void advance();
 		void printLane();
 		bool isWinner ();
