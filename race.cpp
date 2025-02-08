@@ -8,13 +8,18 @@ Race::Race(){
 }
 
 void Race::run(){
-	bool keepGoing = true;
-	for (int hn = 0; hn < NUM_HORSES; hn++){
-		horses[hn].advance();
-		horses[hn].printLane();
-		if (horses[hn].isWinner()){
-			keepGoing = false;
-		}
-	}
+    bool keepGoing = true;
+    while (keepGoing) {
+        keepGoing = false;
+        for (int hn = 0; hn < NUM_HORSES; hn++) {
+            horses[hn].advance();
+            horses[hn].printLane();
+            if (horses[hn].isWinner()) {
+                std::cout << "Horse " << hn << " WINS!!!" << std::endl;
+                return;
+            }
+            keepGoing = true;
+        }
+        std::cout << std::endl;  // Separate turns visually
+    }
 }
-
