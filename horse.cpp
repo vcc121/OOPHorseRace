@@ -35,7 +35,7 @@ void Horse::printLane(){
 }
 
 bool Horse::isWinner(){
-	if (Horse::position >= TRACK_LENGTH) {
+	if (Horse::position >= Horse::trackLength) {
         std::cout << "Horse " << Horse::index << " WINS!!! " << std::endl;
         return true;
 	}
