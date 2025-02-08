@@ -9,6 +9,7 @@ Race::Race(){
 
 void Race::run(){
     bool keepGoing = true;
+
     while (keepGoing) {
         keepGoing = false;
         for (int hn = 0; hn < NUM_HORSES; hn++) {
@@ -20,6 +21,7 @@ void Race::run(){
             }
             keepGoing = true;
         }
-        std::cout << std::endl;  // Separate turns visually
+        std::cout << "Press Enter to advance the race...";
+    	std::cin.ignore();
     }
 }
