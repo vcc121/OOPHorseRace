@@ -1,5 +1,6 @@
 #include <iostream>
 #include "horse.h"
+#include "race.h"
 #include <random>
 
 std::random_device rd;
@@ -38,5 +39,5 @@ bool Horse::isWinner(){
         std::cout << "Horse " << Horse::index << " WINS!!! " << std::endl;
         return true;
 	}
-	bool result=false;
+	return false;
 }
